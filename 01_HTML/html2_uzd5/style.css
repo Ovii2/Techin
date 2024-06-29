@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Phudu&display=swap');
+
+h1,
+h3 {
+  font-family: 'Lobster', cursive;
+}
+
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgb(250, 235, 215);
+}
+
+.main_nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(255, 99, 71);
+  margin-bottom: 15px;
+}
+
+.nav_item {
+  text-decoration: none;
+  color: white;
+}
+
+.description_section {
+  display: flex;
+}
+
+.man_pic {
+  max-width: 30%;
+}
+
+main > section > p > a {
+  color: rgb(255, 99, 71);
+  text-decoration: none;
+}
+
+main > section > ul > li > a {
+  color: rgb(255, 99, 71);
+  text-decoration: none;
+}
+
+.business_description {
+  padding-left: 10px;
+  margin-top: 0;
+}
+
+.footer_nav_item {
+  color: rgb(255, 99, 71);
+  text-decoration: none;
+}

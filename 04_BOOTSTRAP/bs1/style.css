@@ -1,0 +1,55 @@
+.wrapper {
+  height: 100vh;
+}
+
+.card::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  position: absolute;
+  top: -50%;
+  transform: skewY(345deg);
+  transition: all ease-out 1s;
+  /* border-radius: 1rem; */
+}
+
+.card:hover::before {
+  transform: skewY(390deg);
+}
+.card-body {
+  top: 100%;
+  transition: 1s;
+}
+
+.card:hover .card-body {
+  top: 70%;
+}
+
+.card-image {
+  width: 80%;
+  transition: 1s;
+}
+
+h5,
+p {
+  color: blue !important;
+}
+.card:hover .card-image {
+  width: 60%;
+}
+
+.card:hover .white {
+  color: white;
+  transition: 2s;
+}
+
+.heading {
+  padding: 1.5rem;
+}
+
+h5 {
+  margin-top: 3.2rem;
+  margin-right: 0.8rem;
+  padding-right: 0.3rem;
+}

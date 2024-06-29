@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(45deg, #020024 0%, #090979 47%, #fc00ff 100%);
+}
+
+.app-wrap {
+  margin: 5rem auto;
+  max-width: 80%;
+  background-color: #fff;
+  border-width: 1rem 1rem 5rem 1rem;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 1rem;
+}
+
+header {
+  background-color: #ebcd23e2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+}
+
+h1 {
+  color: #3b3b3ba2;
+}
+
+header > a {
+  color: white;
+  padding: 0.8rem;
+  margin: 0.5rem;
+  background: #00000025;
+  border-radius: 0.5rem;
+}
+
+.content {
+  padding: 1rem;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+
+.toleft {
+  float: left;
+  margin: 1rem;
+  width: 30vw;
+}
+
+.toright {
+  float: right;
+  margin: 0.7rem;
+  width: 40vw;
+}
+.icon-bar {
+  display: flex;
+  background-color: #f2c40ff6;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  border-left: 1rem #976e15;
+  padding:0;
+  /* height: 10vh; */
+}
+
+.icon-bar > a {
+  display: flex;
+  color: #976e15;
+  text-decoration: none;
+  flex-direction: column;
+  place-items: center;
+  font-size: 1.3rem;
+  /* border: 1px solid #976e15; */
+  padding:1rem;
+  flex:1;
+}
+
+.icon-bar > a:not(a:last-child) {
+  border-right: 1px solid #808080;
+    
+}
+
+.icon-bar::after {
+  content: "";
+  border-left: 1px solid black;
+}
+
+.icon-bar > a > i {
+  color: white;
+  filter: drop-shadow(3px 2px 2px #00000066);
+  margin-bottom: 0.3rem;
+}

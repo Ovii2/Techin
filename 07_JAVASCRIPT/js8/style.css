@@ -1,0 +1,32 @@
+.error {
+  /* background-color: tomato; */
+  border: none;
+  animation: shake 0.1s ease-in-out 0s 2;
+  box-shadow: 0 0 0.5em tomato;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  margin-top: 0.4rem;
+}
+.error__msg {
+  color: red;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0rem;
+  }
+  25% {
+    margin-left: 0.2rem;
+  }
+  75% {
+    margin-left: -0.2rem;
+  }
+  100% {
+    margin-left: 0rem;
+  }
+}

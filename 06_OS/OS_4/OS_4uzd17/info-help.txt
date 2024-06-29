@@ -1,0 +1,6 @@
+1.Kokia yra man puslapių (man-pages) struktūra? : NAME, SYNOPSIS, DESCRIPTION, SEE ALSO.
+2.Kas yra bash? : Bash is an sh-compatible comman language interpreter that executes commands read from the standart input or from a file.
+3.Kur Xubuntu sistemoje yra saugomi vartotojų slaptažodžiai? : /etc/shadow.
+4.Kas yra ”pipe” ir ”socket”? Pipe - undirectional data channel that can be used for interprocess communication. Socket - create an endpoint for communication
+5.Kas yra ”top”? The top program provides a dynamic real-time view of a running system.
+6.Kam yra naudojamas ssh įrankis? ssh is a program for logging into a remote machine for executing commands on a remote machine.

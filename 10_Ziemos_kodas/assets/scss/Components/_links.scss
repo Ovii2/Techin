@@ -1,0 +1,15 @@
+.nav__link {
+  text-decoration: none;
+  color: $san-juan-blue;
+  font-family: $body-font;
+  font-size: 0.9375rem;//toks berods yra variables??
+  font-style: normal;
+  font-weight: $font-bold;
+  font-size: $p-regular-size;
+  line-height: normal;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}

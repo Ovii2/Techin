@@ -1,0 +1,6 @@
+mount - mount filesystem
+ufw - program for managing a netfilter firewall
+ping - send ICMP ECHO_REQUEST to network hosts
+lsmod - Show the status of modules in the Linux Kernel
+lpinfo - show available devices or drives (deprecated)
+fdisk - manipulate disk partition table

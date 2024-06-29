@@ -1,0 +1,80 @@
+/*---------------BUTTONS------------------*/
+
+.primary__button--normal {
+  width: 10.8125rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  background: $dark-pink;
+  box-shadow: 10px 10px 25px -10px rgba($san-juan-blue, 0.251);
+  border: none;
+  text-align: center;
+  font-family: $body-font;
+  color: $link-water-white;
+  font-weight: $font-bold;
+  font-size: $p-regular-size;
+  letter-spacing: -0.00719rem;
+
+  &:hover {
+    background-color: $charm-pink-active;
+  }
+
+  &:disabled {
+    background-color: $charm-pink-inactive;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.secondary__button--normal {
+  width: 8.0625rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  background-color: transparent;
+  border: 1px solid $link-water-white;
+  color: $link-water-white;
+  text-align: center;
+  font-family: $body-font;
+  font-size: $font-regular;
+  font-weight: $font-bold;
+  letter-spacing: -0.00719rem;
+
+  &:hover {
+    background-color: $white-color;
+    border-radius: 1.5rem;
+    color: $mirage-blue;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    opacity: 0.5;
+    border-radius: 1.5rem;
+    border: 1px solid $link-water-white;
+    pointer-events: none;
+  }
+}
+
+.secondary__submit--normal {
+  width: 9.5rem;
+  height: 3rem;
+  color: $san-juan-blue;
+  font-family: $body-font;
+  font-size: $p-regular-size;
+  font-weight: $font-bold;
+  letter-spacing: -0.00719rem;
+  border-radius: 1.5rem;
+  border: 1px solid $san-juan-blue;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $san-juan-blue;
+    color: $white-color;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    opacity: 0.5;
+    border-radius: 1.5rem;
+    border: 1px solid $san-juan-blue;
+    pointer-events: none;
+  }
+}

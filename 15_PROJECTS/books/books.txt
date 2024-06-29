@@ -1,0 +1,37 @@
+title
+Harry Potter and the Sorcerer's Stone
+Harry Potter and the Prisoner of Azkaban
+Clean Code: A Handbook of Agile Software Craftsmanship
+Effective Java 3rd Edition
+
+
+image
+https://m.media-amazon.com/images/I/71-++hbbERL.jpg
+https://m.media-amazon.com/images/I/91ar+YVpLML._AC_UF1000,1000_QL80_.jpg
+https://m.media-amazon.com/images/I/51E2055ZGUL._AC_UF1000,1000_QL80_.jpg
+https://m.media-amazon.com/images/I/7167aaVxs3L._AC_UF1000,1000_QL80_.jpg
+
+isbn:
+
+4582209227106
+0435856339880
+9443592836915
+9445029251247
+2511965258804
+0997915271468
+7044099223769
+9584854528350
+9333607934593
+7337019602868
+
+
+description
+Harry Potter and the Sorcerer's Stone is the first novel in J.K. Rowling's acclaimed Harry Potter series. The book follows the adventures of an eleven-year-old boy, Harry Potter, who discovers he is a wizard on his birthday. Rescued from his abusive relatives by a giant named Hagrid, Harry is introduced to the magical world and attends Hogwarts School of Witchcraft and Wizardry. There, he befriends Ron Weasley and Hermione Granger, learns about his mysterious past, and confronts the dark wizard Voldemort, who is determined to regain power. The novel combines fantasy, friendship, and the battle between good and evil, captivating readers of all ages. vvv
+
+For twelve long years, the dread fortress of Azkaban held an infamous prisoner named Sirius Black. Convicted of killing thirteen people with a single curse, he was said to be the heir apparent to the Dark Lord, Voldemort.
+Now he has escaped, leaving only two clues as to where he might be headed: Harry Potter's defeat of You-Know-Who was Black's downfall as well. And the Azkban guards heard Black muttering in his sleep, "He's at Hogwarts...he's at Hogwarts."
+Harry Potter isn't safe, not even within the walls of his magical school, surrounded by his friends. Because on top of it all, there may well be a traitor in their midst.
+
+Noted software expert Robert C. Martin, presents a revolutionary paradigm with Clean Code: A Handbook of Agile Software Craftsmanship. Martin, who has helped bring agile principles from a practitioner’s point of view to tens of thousands of programmers, has teamed up with his colleagues from Object Mentor to distill their best agile practice of cleaning code “on the fly” into a book that will instill within you the values of software craftsman, and make you a better programmer―but only if you work at it.
+
+Since this Jolt-award winning classic was last updated in 2008, the Java programming environment has changed dramatically. Java 7 and Java 8 introduced new features and functions including, forEach() method in Iterable interface, default and static methods in Interfaces, Functional Interfaces and Lambda Expressions, Java Stream API for Bulk Data Operations on Collections, Java Time API, Collection API improvements, Concurrency API improvements, and Java IO improvements.

@@ -1,0 +1,27 @@
+// #root {
+//   border: 1px solid black;
+//   h1 {
+//     color: green;
+//   }
+//   img {
+//     max-width: 50%;
+//   }
+// }
+
+#root {
+  .card {
+    text-align: center;
+    max-width: 30%;
+    margin: 1rem auto;
+    border-image: linear-gradient(red, purple) 2;
+    border-width: 0.3rem;
+    border-style: solid;
+    padding: 1rem;
+    h1 {
+      color: green;
+    }
+    img {
+      max-width: 30%;
+    }
+  }
+}

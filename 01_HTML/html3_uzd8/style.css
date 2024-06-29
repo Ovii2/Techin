@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  background-image: url(images/bg-mobile.svg);
+  background-color: #674baf;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.header_logo {
+  max-width: 50%;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.main_img {
+  max-width: 100%;
+}
+
+h2,
+p {
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 50px;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+button {
+  display: block;
+  margin: auto;
+  padding: 10px 70px;
+  border-radius: 35px;
+  border: none;
+  color: hsl(257, 40%, 49%);
+  box-shadow: 0px 2px 4px #000000;
+  background-color: #fff;
+}
+
+footer {
+  margin: 50px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-x-twitter {
+  color: white;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid white;
+}

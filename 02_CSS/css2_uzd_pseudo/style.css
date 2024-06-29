@@ -1,0 +1,24 @@
+body{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a::before{
+    content:'';
+    display: inline-block;
+    transition: all 1s ease;
+}
+a::after{
+    content: url(images/plane.png);
+    display: inline-block;
+    transition: all 3s ease;
+}
+
+a:hover::after{
+    transform: rotate(1800deg);
+}
+

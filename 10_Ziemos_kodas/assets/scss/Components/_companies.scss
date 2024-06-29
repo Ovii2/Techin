@@ -1,0 +1,52 @@
+.companies__container {
+  background-color: $mirage-blue;
+  text-align: center;
+  background-image: url("assets/images/shared/desktop/bg-pattern-circle.svg");
+  background-repeat: no-repeat;
+
+  .companies__logos {
+    svg {
+      path {
+        fill: $link-water-white;
+      }
+    }
+  }
+  .companies__texts {
+    margin: 0 auto;
+    color: $link-water-white;
+
+    h3 {
+      color: $link-water-white;
+
+      text-align: center;
+      font-family: $body-second-font;
+      font-size: $h3-big-size;
+      font-style: normal;
+      font-weight: $font-regular;
+      line-height: 36px; /* 112.5% */
+      letter-spacing: -0.246px;
+    }
+    p {
+      color: $link-water-white;
+      opacity: 0.7;
+
+      text-align: center;
+      font-family: $body-font;
+      font-size: $p-regular-size;
+      font-style: normal;
+      font-weight: $font-regular;
+      line-height: 28px; /* 186.667% */
+    }
+  }
+}
+
+// Struktura:
+// .companies__container{
+//     .companies__logos{
+//         svg{}
+//     }
+//     .companies__texts{
+//         h3{}
+//         p{}
+//     }
+//  }

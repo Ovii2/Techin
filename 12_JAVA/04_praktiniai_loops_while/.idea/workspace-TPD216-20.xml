@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5b98fbcc-e43b-4032-bc14-efc508fa56c1" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2ZWyGk7PXX1QqhaqXU76apO66RR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AverageOfNumbers.executor": "Run",
+    "Application.AverageOfPositiveNumbers.executor": "Run",
+    "Application.NumberAndSumOfNumbers.executor": "Run",
+    "Application.RepeatingBreakingAndRemembering.executor": "Run",
+    "JUnit.All in 04_07.NumberAndSumOfNumbers (1).executor": "Run",
+    "JUnit.All in 04_07.NumberAndSumOfNumbers (2).executor": "Run",
+    "JUnit.All in 04_07.NumberAndSumOfNumbers (3).executor": "Run",
+    "JUnit.All in 04_07.NumberAndSumOfNumbers.executor": "Run",
+    "JUnit.All in 04_08.AverageOfNumbers (1).executor": "Run",
+    "JUnit.All in 04_08.AverageOfNumbers (2).executor": "Run",
+    "JUnit.All in 04_08.AverageOfNumbers.executor": "Run",
+    "JUnit.All in 04_09.AverageOfPositiveNumbers.executor": "Run",
+    "JUnit.All in 04_16.RepeatingBreakingAndRemembering.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "actions.on.save"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.All in 04_04.NumberOfNumbers">
+    <configuration name="AverageOfPositiveNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AverageOfPositiveNumbers" />
+      <module name="04_09.AverageOfPositiveNumbers" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RepeatingBreakingAndRemembering" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RepeatingBreakingAndRemembering" />
+      <module name="04_16.RepeatingBreakingAndRemembering" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in 04_04.NumberOfNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="04_04.NumberOfNumbers" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in 04_09.AverageOfPositiveNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="04_09.AverageOfPositiveNumbers" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in 04_16.RepeatingBreakingAndRemembering" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="04_16.RepeatingBreakingAndRemembering" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in 04_04.NumberOfNumbers" />
+        <item itemvalue="JUnit.All in 04_16.RepeatingBreakingAndRemembering" />
+        <item itemvalue="Application.RepeatingBreakingAndRemembering" />
+        <item itemvalue="JUnit.All in 04_09.AverageOfPositiveNumbers" />
+        <item itemvalue="Application.AverageOfPositiveNumbers" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-8336523bb0d9-657b72ed" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b98fbcc-e43b-4032-bc14-efc508fa56c1" name="Changes" comment="" />
+      <created>1702552035349</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702552035349</updated>
+    </task>
+    <servers />
+  </component>
+</project>

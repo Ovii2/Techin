@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #008000;
+  --black: #000;
+  --grey: #808080;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: var(--grey);
+  padding: 0.2rem 1rem;
+}
+
+nav img {
+  width: 10%;
+  border-radius: 50%;
+  border: 0.01rem solid var(--black);
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.green-border {
+  position: absolute;
+  border: 0.5rem dotted var(--green);
+  right: 20%;
+  left: 20%;
+  bottom: 4%;
+  top: 60%;
+}
+
+main img:nth-child(2) {
+  position: absolute;
+  left: 25%;
+  top: 38%;
+}
+
+.dog {
+  position: absolute;
+  left: 60%;
+  top: 90%;
+}

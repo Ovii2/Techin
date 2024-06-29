@@ -1,0 +1,55 @@
+main {
+  /* width: 60%; */
+  margin: 20px auto;
+  border: 1px solid #000000;
+  padding: 40px 20px;
+}
+
+body {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: -10px;
+}
+
+label {
+  color: #706f6f;
+  margin-bottom: 10px;
+}
+
+th {
+  vertical-align: baseline;
+  text-align: left;
+}
+
+button {
+  left: 160px;
+  top: 20px;
+  position: relative;
+  padding: 10px 20px;
+  border: 1px solid grey;
+}
+
+textarea {
+  resize: vertical;
+  border: 1px solid #b6b6b6;
+}
+
+input {
+  border: 1px solid #b6b6b6;
+}
+
+.phone-number {
+  position: relative;
+  left: -107px;
+}
+
+.other {
+  max-width: 10%;
+}
+
+.date {
+  margin-right: 60px;
+}

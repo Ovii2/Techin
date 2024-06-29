@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Oswald:wght@300;400&display=swap');
+
+:root {
+  --orange: #ff8b00;
+  --deepblue: #3d82f9;
+  --lightblue: #11d0fe;
+  --creamy: #f6f5f5;
+  --lightgrey: #bbbbbb;
+  --white: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--orange);
+}
+
+p {
+  color: var(--lightgrey);
+}
+
+h4 {
+  color: var(--orange);
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Mooli', sans-serif;
+  font-size: 1.5rem;
+  color: var(--orange);
+}
+
+.active {
+  color: var(--orange) !important;
+}
+
+.description {
+  background: url(/images/pexels-photo-167676.jpeg) no-repeat center / cover;
+  position: relative;
+  height: 100vh;
+  z-index: 1;
+  padding-left: 5rem;
+}
+
+.description::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #3d82f9, #11d0fe);
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+h1 {
+  width: 50vw;
+}
+
+input[type='submit'] {
+  background-color: var(--orange);
+  color: white;
+  height: 2.4rem;
+  width: 6rem;
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+  /* margin: 0.5rem; */
+  margin-top: 0.5rem;
+}
+
+input[type='text'] {
+  border-radius: 0.2rem;
+  border: none;
+  font-size: 0.8rem;
+  height: 2.4rem;
+  width: 20rem;
+  text-align-last: left;
+}
+
+input[type='text']::placeholder {
+  padding-left: 0.2rem;
+}
+
+.pictures {
+  position: relative;
+  top: -4rem;
+  z-index: 1;
+  text-align: center;
+}
+
+main {
+  background-color: var(--creamy);
+}
+
+.main__text {
+  max-width: 40vw;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  /* background-color: var(--white); */
+}
+
+.main__text__title {
+  margin-top: 4rem;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.boxes span > i {
+  color: var(--orange) !important;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+.box {
+  border: 1px solid var(--lightgrey);
+  padding: 1rem;
+  width: 18rem;
+  background-color: var(--white);
+  /* max-height: 30vh; */
+  margin: 1rem;
+}
+
+section ul {
+  list-style: none;
+}
+section ul li:before {
+  content: '✓';
+  margin-right: 0.5rem;
+  color: var(--orange);
+}
+
+.section__image {
+  /* min-height: 40px; */
+  min-height: 25rem;
+}

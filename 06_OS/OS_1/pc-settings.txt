@@ -1,0 +1,12 @@
+CPU : 
+	Intel 12th Gen i5-12600
+	6 Cores, 3.33Ghz
+	VT-x, VT-d, EPT.
+RAM : 
+	16GB
+	4800Mhz.
+SSD : 
+	SSD PM9A1 NVMe Samsung 512GB
+	Read : 6.9Gbit/s
+	Write: up to 5Gb/s.
+	

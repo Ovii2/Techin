@@ -1,0 +1,42 @@
+.footer__container {
+  text-align: center;
+  color: $link-water-white;
+
+  background-color: $mirage-blue;
+  background-image: url("/assets/images/shared/desktop/bg-pattern-circle.svg");
+  background-repeat: no-repeat;
+  font-size: $p-regular-size;
+
+  svg {
+    @media screen and (min-width: 768px) {
+    }
+    @media screen and (min-width: 1440px) {
+    }
+    &:hover {
+      path {
+        fill: $charm-pink-active;
+      }
+    }
+  }
+  svg:nth-child(1) {
+    margin-left: 12px;
+    margin-right: 12px;
+    @media screen and (min-width: 768px) {
+      margin-left: 12px;
+      margin-right: 8px;
+    }
+    @media screen and (min-width: 1440px) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+.footer__nav {
+  a {
+    color: $link-water-white;
+    font-size: $p-regular-size;
+    &:hover {
+      opacity: 1; //header links opacity hover
+    }
+  }
+}

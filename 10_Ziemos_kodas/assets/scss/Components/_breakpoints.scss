@@ -1,0 +1,1084 @@
+// /*===============  BREAKPOINTS ===============*/
+$toggle-size: 2.5rem;
+$toggle-margin: 0.625rem;
+$toggle-line: 0.25rem;
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* For small devices */
+@media screen and (max-width: 767px) {
+  .header__container {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    &.is-scrolling {
+      background-color: $body-color;
+      box-shadow: 0 0.2rem 0.5rem rgba($san-juan-blue, 0.1);
+      z-index: 1;
+      margin-top: 0;
+    }
+
+    .nav {
+      position: fixed;
+      top: 3rem;
+      right: 3rem;
+      display: inline-block;
+      max-width: $toggle-size + $toggle-margin;
+      max-height: $toggle-size + $toggle-margin;
+      overflow: visible;
+      outline: none;
+
+      &.is-active {
+        .nav__toggle {
+          &:before,
+          &:after {
+            box-shadow: none;
+            background-color: $white-color;
+          }
+
+          &:before {
+            transform: rotate(-45deg);
+          }
+
+          &:after {
+            transform: rotate(45deg);
+          }
+        }
+
+        .nav__menu {
+          transform: translate(0, 0);
+        }
+      }
+
+      .nav__toggle {
+        $offset: $toggle-size * 0.5;
+        position: relative;
+        width: 1.75rem;
+        height: 1.4375rem;
+        flex-shrink: 0;
+        z-index: 2;
+        transform: translate(1.5rem, -0.44rem);
+        padding-bottom: 2rem;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 2rem;
+          top: 5rem;
+          bottom: 0rem;
+          width: 50%;
+          height: 0.18rem;
+          background-color: $white-color;
+        }
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          top: #{$offset - calc($toggle-line / 2)};
+          left: 0;
+          transform: translate(0, 0);
+          width: 100%;
+          height: 0.2rem;
+          background: $san-juan-blue;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        &:before {
+          box-shadow: 0 0.5rem 0 0 $san-juan-blue;
+        }
+
+        &:after {
+          box-shadow: 0 -0.5rem 0 0 $san-juan-blue;
+        }
+      }
+
+      .nav__menu {
+        position: absolute;
+        top: -3rem;
+        right: -3rem;
+        left: auto;
+        min-width: 18.75rem;
+        max-width: 40vw;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        padding: 5rem 1.25rem 1.25rem 0.625rem;
+        transition: transform 0.3s ease;
+        transform: translate(calc(100% + 3.125rem), 0);
+        background-color: rgba($mirage-blue, 1);
+        display: grid;
+        grid-template-columns: 1fr;
+        align-self: center;
+        grid-gap: 0.3125rem 0;
+        align-content: start;
+        box-shadow: 0 0 3.125rem #0000004d;
+        text-align: center;
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          background: url('/assets/images/shared/desktop/bg-pattern-circle.svg') no-repeat -17.5rem -34.45rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 48.75rem;
+          height: 48.75rem;
+          z-index: -1;
+        }
+      }
+
+      .nav__link {
+        text-align: center;
+        color: $link-water-white;
+        width: 15.5625rem;
+        padding: 0.8rem;
+        font-size: 1.25rem;
+        transition: background-color 0.3s ease;
+        transform: translate(0.75rem, 3rem);
+      }
+
+      .nav__link:first-child {
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0.2rem;
+          text-align: center;
+          top: -2.05rem;
+          bottom: 0rem;
+          width: 100%;
+          height: 0.0625rem;
+          background-color: $link-water-white;
+          opacity: 0.15;
+        }
+      }
+
+      .nav__menu {
+        button {
+          position: absolute;
+          transform: translate(1.6rem, 19.215rem);
+          width: 15.75rem;
+          height: 3rem;
+          font-family: $body-font;
+          box-shadow: 10px 10px 25px -10px rgba($san-juan-blue, 0.25);
+        }
+      }
+    }
+
+    .nav__logo {
+      margin-top: 2.5rem;
+      margin-left: 0.64rem;
+    }
+
+    .nav__header {
+      margin: 1rem 1.5rem 1.5rem 1rem;
+    }
+  }
+
+  .main__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    /* Mobile Home api*/
+
+    .api__container {
+      text-align: center;
+      z-index: 0;
+
+      .api__mobile {
+        width: 34%;
+        margin-bottom: 1.5rem;
+        margin-top: 6.75rem;
+      }
+
+      .api__title {
+        margin: 0 auto;
+        width: 20.4375rem;
+        text-align: center;
+        font-size: $h3-big-size;
+        font-weight: $font-regular;
+        line-height: 2.25rem;
+        letter-spacing: -0.01538rem;
+      }
+
+      .api__paragraph {
+        color: $san-juan-blue-light;
+        margin-top: 1.19rem;
+      }
+
+      .primary__button--normal {
+        width: 20.4375rem;
+        height: 3rem;
+      }
+
+      input[type='email'] {
+        width: 20.4375rem;
+        height: 3rem;
+        border-radius: 1.5rem;
+        box-shadow: 10px 10px 25px -10px rgba($san-juan-blue, 0.251);
+        border: none;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        text-indent: 1.69rem;
+
+        &::placeholder {
+          color: rgba($san-juan-blue, 0.5);
+          font-weight: $font-bold;
+          font-family: $body-font;
+          font-size: $p-regular-size;
+          line-height: normal;
+        }
+      }
+    }
+
+    //companies small screens
+    .companies__container {
+      margin-top: 73px; //tarpai iki kito box elementu
+      //margin-bottom: 80px; //tarpai iki kito box elementu
+
+      background-position: top -37rem center;
+
+      width: 100%;
+
+      padding-bottom: 80px;
+
+      .companies__logos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2.7rem;
+        // gap: 10px; /* reikia patikrinti nes tiksliai nematau is figmos arba jis skirtingas prie kiekvieno logo */
+        align-items: center;
+        justify-items: center;
+        margin-top: 80px;
+        margin-left: 48px;
+        margin-right: 47px;
+
+        > :nth-of-type(4) {
+          margin-right: -0.6rem;
+        }
+
+        > :nth-of-type(5) {
+          margin-right: 1rem;
+        }
+
+        > :nth-of-type(6) {
+          margin-right: 0.4rem;
+        }
+
+        svg {
+          margin-bottom: 39px;
+        }
+      }
+
+      .companies__texts {
+        width: 327px;
+
+        h2 {
+          color: #fbfcfe;
+          text-align: center;
+          font-family: $body-second-font;
+          font-size: 2rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 2.25rem;
+          letter-spacing: -0.01538rem;
+          margin-top: 18.73px;
+          margin-bottom: 16px;
+        }
+
+        p {
+          margin-bottom: 60px;
+          font-size: 14.9px; // cia kazkokia nesamone, bet 15px cia netelpa kaip pagal figma
+        }
+      }
+    }
+
+    .implement__container {
+      display: flex;
+      flex-direction: column;
+
+      // margin-bottom: 1.8rem;
+      .implement__image {
+        width: 20.5rem;
+        height: 13.0625rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5rem;
+        filter: drop-shadow(25px 25px 40px #36536b4d);
+      }
+
+      .implement__text {
+        text-align: center;
+        font-style: normal;
+        width: 20.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5rem;
+        margin-top: 2.656rem;
+        font-weight: $font-regular;
+      }
+
+      .implement__h2__text {
+        color: $san-juan-blue;
+        font-family: $body-second-font;
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+        letter-spacing: -0.01731rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .implement__p__text {
+        color: #6c8294;
+        font-family: $body-font;
+        font-size: $p-regular-size;
+        line-height: 1.75rem;
+      }
+    }
+
+    /*--------app----------*/
+
+    .app__container {
+      text-align: center;
+      margin: 0 auto;
+
+      .app__mobile {
+        width: 40.9%;
+        margin-left: 0.7rem;
+        margin-right: 0.48rem;
+        margin-bottom: 2.7rem;
+      }
+
+      .app__title {
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+        letter-spacing: -0.01731rem;
+        margin-bottom: 1.4rem;
+      }
+
+      .app__paragraph {
+        width: 20.5rem;
+        color: $san-juan-blue-light;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+      }
+    }
+
+    .finances__container {
+      width: 328px;
+      margin-bottom: 6px; //iki ready to start texto
+
+      // width: 328px;
+      //margin-bottom: 32px;
+      > .finances__box:nth-of-type(1) {
+        margin-top: -0.2rem;
+
+        h3 {
+          margin-top: -0.2rem;
+        }
+      }
+
+      > .finances__box:nth-of-type(2) {
+        h3 {
+          margin-top: -0.2rem;
+        }
+      }
+
+      svg {
+        margin-bottom: 2.06rem;
+      }
+
+      .finances__box__text {
+        p {
+          margin-bottom: 2.8rem;
+          letter-spacing: -0.138px;
+        }
+      }
+    }
+    .culture__container {
+      text-align: center;
+    }
+
+    .help__container {
+      text-align: center;
+    }
+  }
+
+  .footer__container {
+    background-position: top 11.06rem center;
+
+    height: 353px;
+    text-align: center;
+    margin-top: 5rem; //iki mygtuko mobile ekrane
+
+    .api__logo {
+      margin-top: 2.56rem; //
+      margin-bottom: 5px;
+    }
+
+    .footer__nav {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        color: $link-water-white;
+        margin-top: 1.94rem;
+        opacity: 0.7;
+      }
+    }
+
+    gap: 1.94rem;
+
+    .api__media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 42px;
+    }
+  }
+}
+
+/* For medium devices */
+
+@media screen and (min-width: 768px) {
+  .header__container {
+    .nav__header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.4rem;
+      margin-top: 2.5rem;
+      margin-left: 0rem;
+
+      .nav__toggle {
+        display: none;
+      }
+
+      .nav__logo {
+        margin-right: 1.2rem;
+      }
+
+      .nav__menu {
+        display: flex;
+        gap: 2.5rem;
+
+        > :first-child {
+          margin-left: -0.6rem;
+        }
+
+        > :last-child {
+          margin-left: 2.8rem;
+        }
+      }
+
+      .nav__link {
+        display: grid;
+        align-self: center;
+      }
+    }
+  }
+
+  .main__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    //NEPAMIRSKIT, KAD CIA TURITE RASYTI SAVO CSS KODA, JIS TURI PATEKTI I MAIN__CONTAINER
+    //PABAIGUS PROJEKTA SIUOS KOMENTARUS ISTRINTI
+
+    //companies medium screens
+    .companies__container {
+      margin-top: 79.6px; //tarpai iki kito box elementu
+      //margin-bottom: 100px; //tarpai iki kito box elementu
+
+      background-position: bottom 383px center;
+      width: 100%; //laikinas sprendimas, nes narsykle sumazina sita box
+      padding-left: 155px;
+      padding-right: 155px;
+      padding-bottom: 88px;
+
+      .companies__logos {
+        padding-top: 88px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 45px;
+
+        svg {
+          transform: scale(1.21);
+        }
+
+        svg:nth-child(1) {
+          margin-top: 0.2rem;
+          margin-left: -4.6rem;
+        }
+
+        svg:nth-child(2) {
+          margin-top: 0.2rem;
+          margin-left: -0.4rem;
+        }
+
+        svg:nth-child(3) {
+          margin-top: 0.2rem;
+          margin-right: -3.8rem;
+        }
+
+        svg:nth-child(4) {
+          margin-left: -4.3rem;
+          margin-top: -0.1rem;
+        }
+
+        svg:nth-child(5) {
+          margin-left: -0.7rem;
+          margin-top: 0rem;
+        }
+
+        svg:nth-child(6) {
+          margin-top: 0.1rem;
+          margin-right: -4rem;
+        }
+      }
+
+      .companies__texts {
+        margin-top: 23px;
+
+        h2 {
+          color: #fbfcfe;
+          text-align: center;
+          font-family: $body-second-font;
+          font-style: normal;
+          font-weight: 400;
+          margin-top: 67px;
+          margin-bottom: 24px;
+
+          font-size: $h2-regular-size;
+          line-height: $h1-small-line-height;
+          /* 116.667% */
+          letter-spacing: -0.369px;
+        }
+
+        p {
+          margin-bottom: 32px;
+
+          opacity: 0.7;
+          font-size: 15.1px;
+        }
+      }
+    }
+
+    .finances__container {
+      //margin-top: 100px;
+      //margin-bottom: 100px;
+      margin-top: 0.7rem;
+      margin-right: 2.5rem;
+      margin-left: 2.64rem;
+      margin-bottom: -2.5rem;
+      gap: 0.62rem;
+      display: flex;
+      flex-direction: row;
+
+      svg {
+        margin-bottom: 2rem;
+      }
+
+      .finances__box__text {
+        margin-top: -0.4rem;
+      }
+    }
+  }
+
+  /* Mobile Home api*/
+  .api__container {
+    text-align: center;
+
+    .api__mobile {
+      width: 27.5%;
+      margin-bottom: 2.93rem;
+      margin-top: 3.1rem;
+    }
+
+    .api__title {
+      margin: 0 auto;
+      width: 35.8rem;
+      text-align: center;
+      font-size: $h2-regular-size;
+      font-weight: $font-regular;
+      line-height: $h2-regular-line-height;
+      letter-spacing: -0.02306rem;
+    }
+
+    .api__paragraph {
+      color: $san-juan-blue-light;
+      transform: translateY(-0.84rem);
+    }
+
+    .api__inside {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-bottom: 0.2rem;
+    }
+
+    .primary__button--normal {
+      position: absolute;
+      width: 10.81rem;
+      height: 3rem;
+      transform: translateX(8.5rem);
+      top: 2.1rem;
+    }
+
+    input[type='email'] {
+      width: 27.8125rem;
+      height: 3rem;
+      border-radius: 1.5rem;
+      box-shadow: 10px 10px 25px -10px rgba($san-juan-blue, 0.251);
+      border: none;
+      margin-top: 2.12rem;
+      margin-bottom: 1rem;
+      text-indent: 1.69rem;
+
+      &::placeholder {
+        color: rgba($san-juan-blue, 0.5);
+        font-weight: $font-bold;
+        font-family: $body-font;
+        font-size: $p-regular-size;
+        line-height: normal;
+      }
+    }
+  }
+
+  .implement__container {
+    .implement__image {
+      width: 24.48281rem;
+      height: 15.625rem;
+      margin: 6.25rem 11.77rem 3rem 11.75rem;
+      filter: drop-shadow(25px 25px 40px rgba($san-juan-blue, 0.302));
+    }
+
+    .implement__text {
+      text-align: center;
+      width: 35.8125rem;
+      margin: -0.18rem 6.12rem 6.27rem 6.06rem;
+    }
+
+    .implement__h2__text {
+      font-size: $h2-regular-size;
+      margin-bottom: 1.5rem;
+      line-height: 3.5rem;
+      letter-spacing: -0.02306rem;
+    }
+
+    .implement__p__text {
+      color: #6c8294;
+      font-size: $p-regular-size;
+      margin-bottom: 1.5rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  /*--------app----------*/
+  .app__container {
+    text-align: center;
+    margin: 0rem auto 5.5rem auto;
+
+    .app__mobile {
+      width: 25.8%;
+      margin-left: 0.8rem;
+      margin-right: 0.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .app__title {
+      // width: 20.44rem;
+      font-size: $h2-regular-size;
+      line-height: $h2-regular-line-height;
+      letter-spacing: -0.02306rem;
+      margin-top: 2.4rem;
+    }
+
+    .app__paragraph {
+      width: 35.81rem;
+      color: $san-juan-blue-light;
+      margin: 0 auto;
+      margin-top: 1.6rem;
+    }
+  }
+
+  .footer__container {
+    width: 100%; //laikinas sprendimas, kol issiaiskinsim, kas apriboja sito box dydi
+    margin-left: 0px;
+    background-position: left 21.19rem top -9.46rem;
+    height: 6.25rem;
+    display: flex;
+    flex-direction: row;
+    gap: 31.7px;
+
+    .api__logo {
+      margin-left: 39px;
+      margin-top: 1.94rem;
+    }
+
+    .footer__nav {
+      display: flex;
+      flex-direction: row;
+      margin-top: 1.63rem;
+      gap: 42.5px;
+      margin-left: 33px;
+
+      a {
+        color: $link-water-white;
+        margin-top: 1rem;
+        opacity: 0.7;
+      }
+    }
+
+    .api__media {
+      margin-top: 2.43rem;
+      margin-left: 6rem;
+    }
+  }
+
+  /* For large devices */
+  @media screen and (min-width: 1440px) {
+    .header__container {
+      .nav__header {
+        margin-right: 0.3rem !important;
+      }
+
+      .nav__menu {
+        margin-right: -0.7rem;
+
+        > :last-child {
+          margin-left: 29.3rem !important;
+        }
+      }
+    }
+
+    .main__container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      //NEPAMIRSKIT, KAD CIA TURITE RASYTI SAVO CSS KODA, JIS TURI PATEKTI I MAIN__CONTAINER
+      //PABAIGUS PROJEKTA SIUOS KOMENTARUS ISTRINTI
+      .api__container {
+        .api__paragraph {
+          margin-left: 2rem;
+        }
+      }
+
+      //companies big screens
+      .companies__container {
+        margin-top: 75.57px; //tarpai iki kito box elementu (iki svg)
+
+        width: 100%;
+
+        padding: 0;
+
+        background-position: bottom 51px right 895px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        .companies__logos {
+          display: grid;
+          justify-items: start;
+          margin-right: 10.5rem;
+          // margin: 0 auto;
+          width: calc(32% - 10px);
+          gap: 2.6rem;
+
+          &:nth-child(even) {
+            margin-left: 131px;
+          }
+
+          padding: 0;
+
+          // svg {
+          //   // margin-top: 2rem;
+          //   margin-left: -5rem;
+          //   margin-bottom: 5px;
+          // }
+
+          svg:nth-child(2) {
+            margin-right: 2.7rem;
+          }
+
+          svg:nth-child(3) {
+            margin-right: 0.5rem;
+          }
+
+          svg:nth-child(5) {
+            // margin-right: 2.3rem;
+            margin-left: 1rem;
+          }
+
+          svg:nth-child(6) {
+            margin-left: 0.1rem;
+          }
+        }
+
+        .companies__texts {
+          margin-top: 6.25rem;
+          margin-bottom: 6.25rem;
+          // margin-left: 8.71rem;
+          margin-left: 9.51rem;
+
+          h2 {
+            margin-right: 2.6rem;
+            margin-top: 0;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: -0.02306rem;
+          }
+
+          p {
+            text-align: left;
+            font-size: $p-regular-size;
+            font-style: normal;
+            font-weight: $font-regular;
+            line-height: 1.75rem;
+            /* 186.667% */
+            opacity: 0.7;
+            margin-left: 0.6rem;
+
+            width: 445px;
+          }
+
+          .secondary__button--normal {
+            margin-right: 18.7rem;
+          }
+        }
+      }
+
+      .finances__container {
+        width: 100%;
+        //margin-top: 146.57px;
+        margin-bottom: -3.3rem;
+        margin-top: -0.6rem;
+        padding-right: 10.31rem;
+        padding-left: 10.31rem;
+
+        gap: 2.98rem;
+        display: flex;
+        flex-direction: row;
+        > :nth-child(2) {
+          margin-left: 0.6rem;
+        }
+      }
+
+      /* Mobile Home api*/
+      .api__container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 18.3rem;
+        margin-top: 1.59rem;
+        margin-bottom: -3.5rem;
+
+        .api__mobile {
+          width: 23.5%;
+          transform: translate(-5.7rem, -0.3rem);
+        }
+
+        .api__title {
+          font-family: $body-second-font;
+          width: 34.125rem;
+          text-align: start;
+          font-size: $h1-large-size;
+          font-weight: $font-regular;
+          line-height: $h1-large-line-height;
+          letter-spacing: -0.03463rem;
+          margin-bottom: 1.6rem;
+        }
+
+        .api__paragraph {
+          color: $san-juan-blue-light;
+          transform: translate(-0.5rem, -0.1rem);
+        }
+
+        .api__inside {
+          margin-bottom: -0.3rem;
+          display: flex;
+          justify-self: start;
+          align-items: center;
+          position: relative;
+        }
+
+        .api__flex {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+        }
+
+        .primary__button--normal {
+          position: absolute;
+          width: 10.81rem;
+          height: 3rem;
+          transform: translateX(134px);
+          top: 24px;
+        }
+
+        input[type='email'] {
+          width: 27.8125rem;
+          height: 3rem;
+          border-radius: 1.5rem;
+          box-shadow: 10px 10px 25px -10px rgba($san-juan-blue, 0.251);
+          border: none;
+          margin-top: 1.5rem;
+          margin-bottom: 1rem;
+          text-indent: 1.69rem;
+          margin-right: 0.2rem;
+
+          &::placeholder {
+            color: rgba($san-juan-blue, 0.5);
+            font-weight: $font-bold;
+            font-family: $body-font;
+            font-size: $p-regular-size;
+            line-height: normal;
+          }
+        }
+      }
+
+      .implement__container {
+        display: flex;
+        margin-bottom: 7.62rem;
+
+        .implement__image {
+          width: 27.8125rem;
+          height: 17.75rem;
+          margin: 9.37rem 0rem 0rem -0.29rem;
+          filter: drop-shadow(25px 25px 40px rgba($san-juan-blue, 0.302));
+        }
+
+        .implement__text {
+          text-align: left;
+          width: 27.8125rem;
+          height: 10.25rem;
+          margin-top: 13.12rem;
+          margin-left: 7.73rem;
+          margin-right: 5.6rem;
+        }
+
+        .implement__h2__text {
+          font-size: $h2-regular-size;
+          margin-bottom: 1.5rem;
+          line-height: 3.5rem;
+          letter-spacing: -0.02306rem;
+        }
+
+        .implement__p__text {
+          color: #6c8294;
+          font-size: $p-regular-size;
+          line-height: 1.75rem;
+        }
+      }
+
+      /*--------app----------*/
+      .app__container {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 5.2rem;
+        margin-bottom: 8.3rem;
+        margin-top: 0.2rem;
+        position: relative;
+
+        .app__circle {
+          position: absolute;
+          width: 49rem;
+          height: 49rem;
+          shape-outside: circle(50% at 30%);
+          clip-path: circle(50% at 100%);
+          background-color: #d2dbe3;
+          right: 0;
+          z-index: -1;
+          transform: translateY(-9.7rem);
+        }
+
+        .app__mobile-flex {
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        .app__mobile {
+          transform: translate(2rem, -1rem);
+          width: 40.4%;
+        }
+
+        .phone__left {
+          transform: translate(1.4rem, -1rem);
+        }
+
+        .app__start {
+          text-align: start;
+          width: 27%;
+          margin-bottom: 4.2rem;
+          margin-left: 0.3rem;
+        }
+
+        .app__title {
+          // width: 20.44rem;
+          font-size: $h2-regular-size;
+          line-height: $h2-regular-line-height;
+          letter-spacing: -0.02306rem;
+          margin-top: 2rem;
+        }
+
+        .app__paragraph {
+          width: 27rem;
+          color: $san-juan-blue-light;
+          margin: 0;
+          margin-top: 1.6rem;
+        }
+      }
+    }
+
+    .footer__container {
+      width: 100%;
+      background-position: left 65.62rem top -9.46rem;
+      display: flex;
+      flex-direction: row;
+      //gap: 2.5rem;
+      margin: 0rem;
+
+      .api__logo {
+        margin-left: 10.25rem;
+        margin-top: 1.94rem;
+      }
+
+      .footer__nav {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1.63rem;
+        //gap: 2rem;
+
+        a {
+          color: $link-water-white;
+          //margin-top: 1rem;
+        }
+      }
+
+      .api__media {
+        margin-top: 2.38rem;
+        margin-left: 32.5rem;
+      }
+    }
+  }
+}

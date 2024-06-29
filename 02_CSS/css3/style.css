@@ -1,0 +1,45 @@
+img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.one{
+    background-color: blueviolet;
+    color: white;
+    padding: 2rem;
+    width: calc(100% - 100px);
+    margin: auto;
+}
+
+/* atributo pradzia */
+img[src*="pav"]{
+    filter: grayscale(55%);
+}
+
+/* atributo pabaiga */
+img[src$="jpg"]{
+    filter:opacity(60%);
+}
+
+/* li:nth-child(3){
+    background-color: #ff6347;
+    padding: 1.5rem;
+    color:#90ee90;
+} */
+
+/* n=0 , 1 ,2 ,3  */
+/* 3*1 - 2 */
+/* 3*2 - 2 */
+/* 3*3 - 2 */
+li:nth-child(3n-2){
+    background-color: #ff6347;
+    padding: 1rem;
+    color:#90ee90;
+}
+
+/* n-2 = -2
+n1 = 1;
+
+*/
+

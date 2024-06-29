@@ -1,0 +1,31 @@
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+header > summary {
+  border: 1px solid rgb(173, 173, 173);
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.picture_with_text {
+  text-align: center;
+  border: 1px solid rgb(173, 173, 173);
+}
+.main_image {
+  border-radius: 230px;
+  padding: 5px;
+}
+
+.image_p {
+  background-color: rgb(202, 202, 202);
+  margin: 1px;
+}
+footer {
+  text-align: center;
+  font-style: italic;
+}

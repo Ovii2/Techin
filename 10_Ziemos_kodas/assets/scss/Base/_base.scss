@@ -1,0 +1,111 @@
+/*---------------- BASE -----------------*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: $body-second-font;
+  font-size: $h1-large-size;
+  line-height: $h1-large-line-height;
+  font-weight: $font-regular;
+  color: $san-juan-blue;
+}
+
+h2 {
+  font-family: $body-second-font;
+  font-size: $h2-regular-size;
+  line-height: $h2-regular-line-height;
+  font-weight: $font-regular;
+  color: $san-juan-blue;
+}
+
+h3 {
+  font-family: $body-second-font;
+  font-size: $h3-big-size;
+  line-height: $h3-big-line-height;
+  font-weight: $font-regular;
+  color: $san-juan-blue;
+}
+
+h4 {
+  font-family: $body-second-font;
+  font-size: $h4-regular-size;
+  line-height: $h4-regular-line-height;
+  font-weight: $font-regular;
+  color: $san-juan-blue;
+}
+
+h1.small {
+  font-family: $body-second-font;
+  font-size: $h1-small-size;
+  line-height: $h1-small-line-height;
+  font-weight: $font-regular;
+  color: $san-juan-blue;
+}
+
+h3.small {
+  font-family: $body-second-font;
+  font-size: $h3-small-size;
+  line-height: $h3-small-line-height;
+  font-weight: $font-regular;
+  color: $san-juan-blue;
+}
+
+p {
+  font-family: $body-font;
+  font-size: $p-regular-size;
+  font-weight: $font-regular;
+  line-height: 1.75rem;
+}
+
+.pricing__hr {
+  width: 100%;
+  height: 0.0625rem;
+  background: $san-juan-blue;
+  opacity: 0.25;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*---------mobile shadow----------*/
+.app__mobile,
+.api__mobile {
+  filter: drop-shadow(25px 25px 80px #36536b4d);
+}
+
+input[type='email'] {
+  color: $san-juan-blue;
+  font-family: $body-font;
+  font-size: $p-regular-size;
+  font-style: normal;
+  font-weight: $font-bold;
+  &:focus {
+    outline: none;
+  }
+}
+
+#main__contact__form {
+  input,
+  textarea {
+    color: $san-juan-blue;
+    font-family: $body-font;
+    font-size: $p-regular-size;
+    font-size: normal;
+    font-weight: $font-regular;
+    line-height: $h3-small-line-height;
+    letter-spacing: -0.00719rem;
+  }
+}

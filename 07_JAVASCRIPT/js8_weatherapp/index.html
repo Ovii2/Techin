@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <script src="/js/main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="card">
+        <div class="search">
+          <input type="search" class="search-bar" placeholder="Search" />
+          <button type="submit" class="search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="weather">
+          <h2 class="city"></h2>
+          <h1 class="temp"></h1>
+          <div class="clouds">
+            <img src="" alt="" class="icon" />
+            <div class="description"></div>
+          </div>
+          <div class="humidity"></div>
+          <div class="wind"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

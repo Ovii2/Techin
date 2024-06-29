@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: 1rem 1rem auto;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.items__count--red span {
+  background-color: #a52a2a;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  transform: translate(0.325rem, 1.75rem);
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+.cart h5 {
+  margin-bottom: -1rem;
+}
+
+.cart p {
+  color: #808080;
+}
+
+.fa-cart-shopping {
+  position: absolute;
+  top: 1.5rem;
+}

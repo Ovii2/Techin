@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: blueviolet;
+    padding: 1rem;
+     display: flex;
+    /*flex-wrap: wrap; */
+    /* flex-flow: column wrap; */
+    justify-content: center;
+}
+
+.container article{
+    background-color: tomato;
+    padding: 1rem;
+    margin: 1rem;
+    width: 200px;
+  
+}
+

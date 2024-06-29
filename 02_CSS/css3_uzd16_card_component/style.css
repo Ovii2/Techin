@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins&display=swap');
+
+:root {
+  --soft-blue: #8bacda;
+  --cyan: #00fff7;
+  --very-dark-blue-main-bg: #0d192b;
+  --very-dark-blue-card-bg: #14253d;
+  --very-dark-blue-line: #2e405a;
+  --white: #ffffff;
+  --lightgrey: #d3d3d3;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56.25rem;
+  padding: 9.5rem 0rem;
+  background: var(--very-dark-blue-main-bg);
+}
+
+.card {
+  display: grid;
+  justify-content: center;
+  align-content: space-evenly;
+  width: 21.875rem;
+  height: 37.25rem;
+  flex-shrink: 0;
+  border-radius: 0.9375rem;
+  background: var(--very-dark-blue-card-bg);
+  box-shadow: 0rem 1.5655rem 3rem 0rem rgba(0, 0, 0, 0.1);
+}
+
+.card__image {
+  position: relative;
+  display: flex;
+  width: 18.875rem;
+  height: 18.875rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: url(images/image-equilibrium.jpg) no-repeat;
+  background-size: cover;
+  background-color: var(--lightgrey);
+}
+
+.card__image:hover::before {
+  content: '';
+  position: absolute;
+  background: url(images/icon-view.svg) no-repeat center;
+  inset: 0;
+  background-color: var(--cyan);
+  opacity: 0.503;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.card__title {
+  width: 18.875rem;
+  color: var(--white);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Heading */
+  font-family: Outfit;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.card__title:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.card__subtitle {
+  width: 18.875rem;
+  color: var(--soft-blue);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Body */
+  font-family: Outfit;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.625rem; /* 144.444% */
+}
+
+.card__copy {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 18.8125rem;
+  height: 1.25rem;
+}
+
+.card__copy__left {
+  color: var(--cyan);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Caption (Bold) */
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.card__copy__left > span {
+  margin-left: 0.5rem;
+}
+
+.card__copy__left > img {
+  vertical-align: text-bottom;
+}
+.card__copy__right > span {
+  margin-left: 0.2rem;
+}
+
+.card__copy__right > img {
+  vertical-align: sub;
+}
+
+.card__copy__right {
+  color: var(--soft-blue);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Caption */
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* card copy 2 start */
+.product{
+  background-color: var(--very-dark-blue-card-bg);
+  padding: 1rem;
+  color: var(--white);
+}
+
+.product__price{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.price__amount, .price__daysleft{
+  display: grid;
+  align-items: center;
+}
+
+.price__amount{
+  justify-items: start;
+}
+
+.price__daysleft{
+  justify-items: end;
+}
+
+
+:is(.price__amount, .price__daysleft div){
+display: grid;
+grid-template-columns: auto 1fr;
+/* grid-template-columns: 20px 1fr; */
+align-items: center;
+}
+
+
+
+/* card copy 2 end */
+
+.card__copy__line {
+  width: 18.875rem;
+  height: 1px;
+  background-color: var(--very-dark-blue-line);
+  border: none;
+}
+
+.card__footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-items: stretch;
+  align-content: center;
+  align-items: center;
+  width: 14.375rem;
+  height: 2.0625rem;
+  margin-top: -1rem;
+}
+
+.card__footer__image {
+  width: 2.0625rem;
+  height: 2.0625rem;
+  flex-shrink: 0;
+  border-radius: 2.0625rem;
+  border: 0.06rem solid var(--white);
+  background: url(images/image-avatar.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--lightgrey);
+  opacity: 80%;
+}
+
+.card__footer__text__left {
+  color: var(--soft-blue);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Caption */
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card__footer__text__right {
+  color: var(--white);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Caption */
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card__footer__text__right:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}

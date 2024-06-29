@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+
+.banner{
+    background-image: url(images/cliff.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+    z-index: -1;
+ }
+
+.banner p{
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20rem;
+}
+
+.banner-2::before{
+    background: linear-gradient(217deg, #ff0000cc, #ff000000 70.71%),
+    linear-gradient(127deg, #00ff00cc, #00ff0000 70.71%),
+    linear-gradient(336deg, #0000ffcc, #0000ff00 70.71%);
+    mix-blend-mode: difference;
+}
+
+.banner-3::before{
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    mix-blend-mode: difference;
+}
+.banner-4::before{
+    background:linear-gradient(45deg, #2600ff96, #93511a92);
+    mix-blend-mode: plus-lighter;
+}
+.banner-5::before{
+    background:linear-gradient(90deg, #00ff6696, #171f5592);
+    mix-blend-mode: lighten;
+}

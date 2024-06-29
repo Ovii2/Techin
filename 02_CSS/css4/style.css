@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+*:not(main){
+    padding: 1rem;
+}
+
+.container{
+    background-color: #deb887;
+}
+
+header{
+    background-color: #8a2be2;
+    display: none;
+}
+
+aside{
+    background-color: #ffe4c4;
+}
+
+article{
+    background-color: #5f9ea0;
+}
+
+footer{
+    background-color: #a9a9a9;
+}
+
+
+@media screen and (min-width:768px){
+aside{
+    background-color: aqua;
+}
+header{
+    display: block;
+}
+}    
+
+@media screen and (min-width:1200px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}

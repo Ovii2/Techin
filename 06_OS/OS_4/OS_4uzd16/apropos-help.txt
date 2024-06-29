@@ -1,0 +1,4 @@
+rm - remove filer or directories
+chown - change file ownwer and group
+df - report file system disk space usage
+useradd - create a new user or update default new user information

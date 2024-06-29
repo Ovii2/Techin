@@ -1,0 +1,12 @@
+.header {
+  background-color: var(--primary-violet);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  height: 5rem;
+}
+
+.header-title {
+  margin-left: 7rem;
+}

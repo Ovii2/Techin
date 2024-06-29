@@ -1,0 +1,2 @@
+MIT: uzdaryti koda ir nerodyti source kodo.
+AGPL vs GPL vs LGPL : skirtumas, kad AGPL tinklo naudojimas yra platinimas.

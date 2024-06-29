@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html5 uzd11</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Dance registration</h1>
+      <p>Fill the registration form below keenly to enter the dancing competition.</p>
+      <hr />
+      <form>
+        <table class="table-1">
+          <tr>
+            <th>Name</th>
+            <td>
+              <input type="text" name="fname" id="fname" /><br />
+              <label for="fname">First name</label>
+            </td>
+            <td>
+              <input type="text" name="lname" id="lname" /><br />
+              <label for="lname">Last name</label>
+            </td>
+          </tr>
+          <tr>
+            <th>E-mail</th>
+            <td colspan="2">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ex: myname@example.com"
+              /><br />
+              <label for="email">example@example.com</label>
+            </td>
+          </tr>
+          <tr>
+            <th>Phone Number</th>
+            <td>
+              <input
+                class="area-code"
+                type="number"
+                id="areacode"
+                name="areacode"
+                min="1"
+                max="3"
+              /><span> - </span><br />
+              <label for="areacode">Area Code</label>
+            </td>
+            <td class="phone-number">
+              <input type="number" name="phonenumber" id="phonenumber" /><br />
+              <label for="phonenumber">Phone Number</label>
+            </td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td>
+              <input type="radio" id="gender_male" name="gender" value="male" checked />
+              <label for="gender">Male</label>
+            </td>
+            <td>
+              <input type="radio" id="gender_female" name="gender" value="female" />
+              <label for="gender">Female</label>
+            </td>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <td colspan="2">
+              <input type="text" name="address" id="address" /> <br />
+              <label for="address">Street Address</label>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>
+              <input type="text" name="address2" id="address2" />
+              <br />
+              <label for="address2">Street Address Line 2</label>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>
+              <input type="text" name="city" id="city" />
+              <br />
+              <label for="city">City</label>
+            </td>
+
+            <td>
+              <input type="text" name="state" id="state" />
+              <br />
+              <label for="state">State / Province</label>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>
+              <input type="number" name="postal" id="postal" /> <br />
+              <label for="postal">Postal / zip code</label>
+            </td>
+          </tr>
+        </table>
+        <hr />
+        <table class="table-2">
+          <tr>
+            <th>Type of Dance</th>
+            <td><input type="radio" name="salsa" id="salsa" value="Salsa" />Salsa</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><input type="radio" name="bachata" id="bachata" value="Bachata" />Bachata</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><input type="radio" name="tango" id="tango" value="Tango" />Tango</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><input type="radio" name="hip_hop" id="hip-hop" value="Hip Hop" />Hip hop</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><input type="radio" name="club" id="club" value="Club" />Club</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>
+              <input type="radio" name="other" id="other" value="Other" />Other
+              <input class="other" type="text" name="other" id="other" placeholder="other" />
+            </td>
+          </tr>
+          <tr>
+            <th>Start Day & Time</th>
+            <td>
+              <input type="datetime-local" name="date" id="date" /><br />
+              <label class="date" for="date">Date</label>
+              <label class="date" for="date">Time</label>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Comments</th>
+            <td><textarea name="comments" id="comments" cols="50" rows="6"></textarea></td>
+          </tr>
+        </table>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>

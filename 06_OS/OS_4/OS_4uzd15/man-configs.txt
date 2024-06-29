@@ -1,0 +1,5 @@
+hosts - static table lookup for hostnames
+host.conf - resolver configuration file
+networks - network name information
+environment - the environment variables config file
+resolv.conf - resolver configuration file

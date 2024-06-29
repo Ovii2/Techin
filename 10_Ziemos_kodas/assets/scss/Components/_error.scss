@@ -1,0 +1,122 @@
+.error {
+  border: none;
+  animation: shake 0.1s ease-in-out 0s 2;
+
+  &__msg {
+    color: red;
+
+  }
+  &__msgs {
+    color: red;
+  }
+
+    &__about{
+        color: red;
+    }
+
+    &__pricing{
+        color: red;
+    }
+
+    &__contacts{
+        color: red;
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      margin-left: 0rem;
+    }
+    25% {
+      margin-left: 0.2rem;
+    }
+    75% {
+      margin-left: -0.2rem;
+    }
+    100% {
+      margin-left: 0rem;
+    }
+  }
+
+
+@media screen and (max-width: 767px) {
+    .error{
+        transform: translateY(1rem);
+    }
+
+    .error__msgs{
+        text-align: center;
+    }
+
+    .error__about{
+        position: absolute;
+        transform: translate(5rem, 9.6rem);
+    }
+
+    .error__pricing{
+        position: absolute;
+        transform: translate(5rem, 9.6rem);
+    }
+
+    .error__contacts{
+        text-align: center;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .error{
+        transform: translateY(-0.7rem);
+    }
+
+    .error__msgs{
+        position: absolute;
+        transform: translate(-0.8rem, 3.7rem);
+    }
+
+    .error__about{
+        position: absolute;
+        transform: translate(-1.8rem, 3.5rem);
+    }
+
+    .error__pricing{
+        position: absolute;
+        transform: translateY(3.6rem);
+    }
+
+    .error__contacts{
+        position: absolute;
+        transform: translate(-1.5rem, 4.5rem);
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .error{
+        transform: translateY(-0.3rem);
+    }
+
+    .error__msg{
+        margin-left: 3.6rem;
+    }
+
+    .error__msgs{
+        position: absolute;
+        transform: translate(-2.7rem, 3.9rem);
+    }
+
+    .error__about{
+        position: absolute;
+        transform: translate(-2.9rem, 3.6rem);
+    }
+
+    .error__pricing{
+        position: absolute;
+        transform: translate(-2.3rem, 3.5rem);
+    }
+
+    .error__contacts{
+        position: absolute;
+        transform: translate(-5.5rem, 6rem);
+    }
+}

@@ -1,0 +1,105 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: medium;
+  max-width: 800px;
+  margin: 125px auto;
+}
+
+.title {
+  text-align: center;
+}
+.n_sused {
+  font-size: 10px;
+}
+
+.suoliuk {
+  color: rgb(8, 8, 235);
+}
+.nemoksiuk {
+  font-weight: 700;
+}
+
+.pradejo {
+  text-decoration: underline;
+}
+.ivykdziau {
+  color: rgb(52, 176, 52);
+}
+.buratino {
+  font-weight: 700;
+}
+
+.prasyma {
+  color: rgb(231, 10, 10);
+}
+
+.paprase {
+  font-size: large;
+  font-weight: 700;
+}
+
+.nukakciau {
+  font-size: x-large;
+}
+
+.suzinociau {
+  color: rgb(8, 8, 235);
+}
+
+.niekas {
+  font-size: x-large;
+  font-family: monospace;
+  font-style: italic;
+}
+
+.nezinojo {
+  text-decoration: underline;
+}
+
+.turejau {
+  font-size: x-small;
+}
+
+.lektuveli {
+  color: rgb(52, 176, 52);
+}
+
+.padovanojes {
+  color: rgb(247, 7, 7);
+}
+
+.buratinas {
+  font-weight: 700;
+  font-size: larger;
+}
+
+.valandos {
+  font-size: x-small;
+}
+
+.nepralekiau {
+  text-decoration: underline;
+  font-style: italic;
+  font-size: x-large;
+}
+
+.mazyt_saul {
+  font-style: italic;
+  font-size: 140%;
+}
+
+.viename {
+  color: rgb(247, 7, 7);
+}
+
+.vietiniai {
+  color: rgb(52, 176, 52);
+}
+
+.plonut {
+  font-size: x-small;
+}
+
+.neleidzias {
+  color: rgb(8, 8, 235);
+}

@@ -1,0 +1,21 @@
+body {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 3px;
+}
+
+footer {
+  margin-top: 100px;
+}

@@ -1,0 +1,25 @@
+Xubuntu:
+	sudo -i arba sudo su -(root user)
+	apt install linux-headers-6.1.0-13-amd64
+	sudo apt install gcc make perl
+	sudo ./VBoxLinuxAdditions.run
+	sudo useradd -m -g user -G lp,audio,sudo -s /bin/bash mouse (sukurti useri mouse)
+	sudo groupadd java (sukurti grupe java)
+	sudo gpasswd -a mouse java (prideti mouse prie grupes java)
+	sudo userdel cat (trinti vartotoja)
+	sudo userdel -fr mouse (istrinti varotoja force delete)
+	sudo systemctl stop NetworkManager
+	sudo systemctl status NetworkManager
+	sudo systemctl start NetworkManager
+	cat -n /etc/passwd | tac /etc/group > passeur.txt (sujungti du failus vienas ASC kitas DESC)
+	cat -n /etc/passwd /etc/group > passeur.txt (sujungti du failus)
+	cat -n passeur.txt > numbered.txt (sunumeruoja ir issaugo nauja faila)
+	Debian:
+	su -
+	student
+	cd /media/cdrom0	
+	uname -a (branduolio versija)
+	apt install linux-headers-6.1.0-13-amd64
+	apt install gcc make perl
+	bash VBoxLinuxAdditions.run
+	lsb_release -a (versijai patikrinti)	

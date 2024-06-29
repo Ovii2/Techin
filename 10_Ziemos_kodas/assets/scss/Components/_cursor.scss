@@ -1,0 +1,15 @@
+a,
+button,
+input[type='email'],
+input[type='text'], //pridejau kursoriu text, reikia pildant contact.html
+textarea,//ir pildant msg contact.html
+div.nav__toggle,
+.nav__toggle,
+.nav__toggle::before,
+.nav__toggle::after {
+  cursor: url("/assets/images/shared/desktop/pointer.svg"), pointer;
+}
+
+span.checkbox-custom {
+  cursor: url("/assets/images/shared/desktop/pointer.svg"), pointer !important;
+}

@@ -1,0 +1,64 @@
+
+Studentas {
+	Studento_asmens_kodas integer pk increments
+	Studento_numeris integer
+	Studento_vardas integer
+	Studento_pavarde integer
+	Studiju_programa integer *>* Fakultetai.Studiju_programa
+	Norimas_kambario_tipas integer *>* Kambario_tipas.Kambario_tipas
+}
+
+Kambario_tipas {
+	Kambario_nr integer pk increments
+	Kambario_tipas integer
+	Kambario_aprasymas integer
+}
+
+Bendrabutis {
+	Bendrabucio_numeris integer pk increments
+	Bendrabucio_adresas integer
+	Pirminis_fakultetas integer
+	Dvivieciu_kambariu_skaicius integer *>* Kambarys_bendrabutyje.Kambario_tipas
+	Trivieciu_kambariu_skaicius integer *>* Kambarys_bendrabutyje.Kambario_tipas
+	Uzrakto_tipas integer
+}
+
+Kambarys_bendrabutyje {
+	Kambario_nr integer pk increments
+	Kambario_tipas integer *>* Kambariu_tipai.Kambario_tipas
+	Laisvu_vietu_skaicius integer
+}
+
+Apgyvendinimo_sutartis {
+	Sutarties_nr integer pk increments
+	Pasirases_studentas integer *>* Studentas.Studento_asmens_kodas
+	Bendrabucio_numeris integer *>* Bendrabutis.Bendrabucio_numeris
+	Kambario_tipas integer
+	Kambario_numeris integer
+	Internetas integer
+	Data integer
+}
+
+Einamieji_apmokejimai {
+	Apmokejimo_nr integer pk increments
+	Studento_nr integer > Apgyvendinimo_sutartis.Pasirases_studentas
+	Bendrabucio_nr integer
+	Kambario_nr integer
+	Menuo integer
+	Skolos_nr integer
+	Apmoketa integer
+}
+
+Skolu_sarasas {
+	Skolos_nr integer pk increments *>* Einamieji_apmokejimai.Skolos_nr
+	Kambario_nr integer
+	Data integer
+	Suma integer
+}
+
+Fakultetai {
+	Fakulteto_nr integer pk increments
+	Studiju_programa integer
+	Fakulteto_adresas integer
+	Fakulteto_aprasymas integer
+}

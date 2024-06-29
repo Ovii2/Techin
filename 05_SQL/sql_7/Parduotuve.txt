@@ -1,0 +1,68 @@
+
+Darbuotojai {
+	Darbuotojo_id integer pk increments *>* Tvarkarastis.Darbuotojo_id
+	Darbuotojo_vardas integer
+	Darbuotojo_pavarde integer
+	Darbuotojo_isidarbinimo_data integer
+	Darbuotojo_pareigos_id integer *>* Darbuotoju_pareigos.Darbuotojo_pareigos_id
+}
+
+Kasos {
+	Kasos_id integer pk increments
+	Kasos_atsiskaitymo_tipas integer *>* Atsiskaitymo_tipas.Atsiskaitymo_tipo_id
+	Kasos_tipas integer
+}
+
+Prekes {
+	Prekes_id integer pk increments
+	Prekes_pavadinimas integer
+	Prekes_tipas integer *>* Prekiu_tipai.Prekiu_tipo_id
+	Prekes_kiekis_sandelyje integer
+	Prekes_vieta_parduotuveje integer
+}
+
+Atsiskaitymo_tipas {
+	Atsiskaitymo_tipo_id integer pk increments
+	Atsiskaitymo_pavadinimas integer
+}
+
+Darbuotoju_pareigos {
+	Darbuotojo_id integer pk increments
+	Darbuotojo_pareigos_id integer *>* Darbuotoju_pareigu_sarasas.Darbuotoju_pareigu_saraso_id
+}
+
+Prekiu_tipai {
+	Prekiu_tipo_id integer pk increments
+	Prekiu_tipo_pavadinimas integer
+}
+
+Tvarkarastis {
+	Laikotarpio_id integer pk increments
+	Darbuotojo_id integer
+	Kasos_id integer *>* Kasos.Kasos_id
+	Darbuotojo_prisijungimo_pradzia integer
+	Darbuotojo_prisijungimo_pabaiga integer
+	Data integer
+	Uzdirbtos_pajamos integer
+}
+
+Darbuotoju_pareigu_sarasas {
+	Darbuotoju_pareigu_saraso_id integer pk increments *>* Darbuotoju_pareigos.Darbuotojo_pareigos
+	Darbuotoju_pareigu_pavadinimas integer
+	Darbuotoju_pareigu_aprasymas integer
+}
+
+Kasos_tipas {
+	Kasos_tipo_id integer pk increments > Kasos.Kasos_tipas
+	Kasos_tipo_pavadinimas integer increments
+}
+
+Prekes_vieta {
+	Lentynos_id integer pk increments
+	Prekes_tipo_id integer >* Prekiu_tipai.Prekiu_tipo_id
+}
+
+Lentynos {
+	Lentynos_id integer pk increments *> Prekes_vieta.Lentynos_id
+}
+

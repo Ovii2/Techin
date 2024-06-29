@@ -1,0 +1,91 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+
+:root{
+    --navy-blue: #354B62;
+    --light-red:#EB847D;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+ul li{
+    list-style-type: none;
+}
+
+header{
+    position: relative;
+    background: url(images/laptops.jpg) no-repeat center / cover;
+    height: 100%;
+    z-index: 1;
+   }
+
+header::before{
+    position: absolute;
+    content: "";
+    background-color: var(--light-red);
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.header__icon{
+    font-size: 4rem !important;
+    margin-bottom: 2rem;
+}
+
+.header__image__text{
+    max-width: 70%;
+}
+.header__button{
+    background-color: var(--navy-blue);
+}
+
+.nav__section{
+    background-color: var(--navy-blue);
+}
+.nav__section a{
+    color:var(--light-red);
+    margin-top: 0;
+}
+.card{
+    border:none;
+    max-width: 18rem;
+}
+
+.card__mid_transparent{
+background: transparent;
+border: none;
+
+}
+
+.card a{
+    background-color:var(--light-red);
+    border: none;
+    
+ }
+.card__mid{
+    background:url(images/keyboard.jpg) no-repeat center / cover;
+    margin-bottom: 0.5rem;
+    /* background: transparent; */
+    
+        
+}
+
+footer{
+    background-color: var(--navy-blue);
+    color: white;
+}
+
+footer i {
+    margin-right: 0.5rem;
+}
+

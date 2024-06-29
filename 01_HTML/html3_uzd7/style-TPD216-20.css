@@ -1,0 +1,40 @@
+h4{
+    margin-bottom: -10px;
+    text-decoration: underline;
+    
+}
+
+ul>li{
+
+    list-style: none;
+}
+
+.nested_letters_list >li{
+    list-style: lower-latin;
+}
+
+.nested_letters_list_ol{
+    list-style: lower-latin;
+}
+
+.section2>ol>li:nth-of-type(1){
+    list-style:upper-roman;
+}
+
+.section2>ol>li:nth-of-type(2){
+    list-style:upper-roman;
+}
+
+.section3>ol>li:nth-child(1){
+    list-style-type: circle;
+}
+.section3>ol>li:nth-child(2){
+    list-style-type: disc;
+}
+.section3>ol>li:nth-child(3){
+    list-style-type: square;
+}
+
+.section4>ul>li{
+    list-style-image: linear-gradient(to left bottom ,rgb(255, 0, 0), rgb(0, 0, 255) );
+}

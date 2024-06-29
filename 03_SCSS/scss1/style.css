@@ -1,0 +1,19 @@
+nav {
+  background-color: antiquewhite;
+  padding: 1.5rem;
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li:hover {
+  background-color: rgba(255, 166, 0, 0.6431372549);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-right: 0.3rem;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,33 @@
+.product{
+    padding: 10px;
+    width: 30vw;
+    background-color: #ff6347;
+    /* position: relative; */
+}
+
+.product:hover::before{
+    content: '';
+    border: 1px solid #f4cf03;
+    /* position: absolute; */
+    top: -10px;
+    display: block;
+    width: 20px;
+    height: 10px;
+    background-color: #ffd700;;
+}
+
+div::before{
+    content: url(images/110801_sun_icon.png      
+    );
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    /* background-size: 10px 10px; */
+}
+
+.product::selection{
+    background-color: rgba(41, 197, 41, 0.669);
+}
+
+
+

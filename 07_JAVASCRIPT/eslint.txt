@@ -1,0 +1,20 @@
+{
+    "env": {
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": ["airbnb-base", "prettier"],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "linebreak-style":"off",
+        "no-console": "warn"        
+    }
+}
+
+npm init -y
+npm install npm
+npm init @eslint/config
+npm install -D eslint-config-prettier eslint-plugin-prettier

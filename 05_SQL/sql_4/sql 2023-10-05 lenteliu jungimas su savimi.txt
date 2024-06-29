@@ -1,0 +1,312 @@
+SELECT A.PAVARDE, B.PAVARDE, A.KVALIFIKACIJA, B.KVALIFIKACIJA, A.NR AS `A NUMERIS`, B.NR AS `B NUMERIS`
+FROM VYKDYTOJAI AS A JOIN VYKDYTOJAI AS B
+ON A.KVALIFIKACIJA = B.KVALIFIKACIJA 
+WHERE A.NR<B.NR
+
+//pakeisti nr stulpeli i not null
+ALTER TABLE VYKDYTOJAI 
+ALTER COLUMN NR SMALLINT NOT NULL
+
+//uzdeti primary key nr stulpeliui
+ALTER TABLE VYKDYTOJAI 
+ADD PRIMARY KEY (NR);
+
+//uzdeti antrini rakta su atnaujinimu
+ALTER TABLE VYKDYMAS    
+ADD FOREIGN KEY (VYKDYTOJAS)
+REFERENCES VYKDYTOJAI(NR)
+ON UPDATE CASCADE 
+ON DELETE CASCADE;
+
+//uzdeti antrini rakta be atnaujinimo
+ALTER TABLE VYKDYMAS    
+ADD FOREIGN KEY (PROJEKTAS)
+REFERENCES PROJEKTAI(NR)
+
+1.Banku sistema
+Zmones {
+	Asm_kodas bigint pk
+	Vardas varchar(50)
+	Pavarde varchar(50)
+}
+
+Bankai {
+	Nr integer pk
+	Pavadinimas varchar(50)
+	Bustines_adresas varchar(50)
+	Trumpinys varchar(50)
+}
+
+Zmoniu_Bankai {
+	Saskaitos_nr integer pk
+	Zmoniu_asm_kodas binary *> Zmones.Asm_kodas
+	Banko_nr int *> Bankai.Nr
+	Balansas integer
+}
+
+
+
+2.Veterinarijos klinika
+Seimininkai {
+	ID integer pk increments unique >* Gyvunai.ID
+	Vardas varchar(50)
+	Pavarde varchar(50)
+	Adresas varchar
+	Telefonas bigint
+}
+
+Gyvunai {
+	Gyvuno_id int(50) pk increments unique
+	Seiminiko_id int(50) unique > Seimininkai.ID
+	Pavadinimas varchar(80)
+	Veisle varchar(80)
+	Gimimo datetime
+	Ligos_istorija varchar(254)
+	Data datetime
+}
+
+Specialistai {
+	Darbuotojo_numeris bigint pk unique
+	Vardas varchar(40)
+	Pavarde varchar(40)
+	Specialybe varchar(80)
+}
+
+Kaininikas {
+	Paslaugos_nr integer pk increments
+	Pavadinimas integer
+	Kaina integer
+}
+
+Vizitai {
+	Vizito_nr integer pk increments unique
+	Paciento_nr bigint unique > Gyvunai.Gyvuno_id
+	Darbuotojo_nr bigint unique > Specialistai.Darbuotojo_numeris
+	Apsilankymo_tikslas varchar
+	Kaina integer
+	Data datetime
+}
+
+3.
+Darbdavys {
+	Darbdavio_id integer pk increments >* Darbo_pasiulymai.Darbdavio_id
+	Darbdavio_pavadinimas varchar(80)
+	Uzsiregistravimo_data datetime
+	Trumpa_informacija integer
+}
+
+Darbo_pasiulymai {
+	Darbo_pasiulymo_id integer pk increments
+	Darbdavio_id integer
+	Reikalingos_kompetencijos varchar *>* Zmogus.Turimos_kompetencijos
+	Idejimo_data integer
+	Bendra_darbo_veiklos_sritis varchar
+	Atlyginimas integer
+}
+
+Zmogus {
+	Zmogaus_id integer pk increments
+	Vardas varchar
+	Pavarde varchar
+	Gimimo_data datetime
+	Uzregistravimo_data datetime
+	Turimos_kompetencijos_id integer increments *>* Kompetenciju_sarasas.Kompentencijos_id
+	Turimos_kompetencijos varchar
+}
+
+Kompetenciju_sarasas {
+	Kompentencijos_id integer pk increments
+	Kompetencijos_pavadinimas varchar(80)
+}
+
+5. Internetine parduotuve
+Atsiemimo_punkto_darbuotojai {
+	Atsiemimo_punkto_id integer pk increments *> Atsiemimo_punktai.Atsiemimo_punkto_id
+	Atsiemimo_punkto_darbuotojo_id integer
+}
+
+Darbuotojai {
+	Darbuotojo_id integer pk increments *>* Atsiemimo_punkto_darbuotojai.Atsiemimo_punkto_darbuotojo_id
+	Darbuotojo_vardas integer
+	Darbuotojo_pavarde integer
+	Darbuotojo_telefono_numeris integer
+	Darbuotojo_pareigos integer *> Darbuotoju_pareigos.Darbuotoju_pareigos_id
+}
+
+Klientai {
+	Kliento_id integer pk increments *>* Prekiu_pardavimai.Kliento_id
+	Kliento_vardas integer
+	Kliento_pavarde integer
+	Kliento_pirkimu_istorija integer
+}
+
+Prekes {
+	Prekes_id integer pk increments *>* Krepselis.Prekes_id
+	Prekes_pavadinimas integer
+	Prekes_kaina integer
+	Prekes_kategorija integer
+	Prekes_svoris integer
+	Prekes_atsiliepimas integer *>* Klientu_prekes_atsiliepimai.Atsiliepimo_id
+	Prekes_ivertinimas integer *>* Klientu_prekiu_ivertinimas.Prekes_ivertinimo_id
+}
+
+Krepselis {
+	Prekes_id integer pk increments
+	Prekes_pavadinimas integer
+	Prekiu_kiekis integer
+	Prekes_kaina integer
+}
+
+Klientu_prekes_atsiliepimai {
+	Atsiliepimo_id integer pk increments
+	Kliento_id integer >* Klientai.Kliento_id
+	Atsiliepimo_tekstas integer
+}
+
+Klientu_prekiu_ivertinimas {
+	Prekes_ivertinimo_id integer pk increments
+	Kliento_id integer *>* Klientai.Kliento_id
+	Prekes_ivertinimo_balas integer
+}
+
+Darbuotoju_pareigos {
+	Darbuotoju_pareigos_id integer pk increments
+	Darbuotoju_pareigos_pavadinimas integer
+	Darbuotoju_pareigu_aprasymas integer
+}
+
+Atsiemimo_punktai {
+	Atsiemimo_punkto_id integer pk increments *> Prekiu_pardavimai.Atsiemimo_punkto_id
+	Atsiemimo_punkto_adresas integer
+	Atsiemimo_punkto_telefono_numeris integer
+	Atsiemimo_punkto_el_pastas integer
+}
+
+Prekiu_pardavimai {
+	Prekiu_pardavimo_id integer pk increments
+	Prekiu_pardavimo_data integer
+	Kliento_id integer
+	Atsiemimo_punkto_id integer
+}
+
+Atsiemimo_punkto_prekes {
+	Atsiemimo_punkto_prekes_id integer pk increments *> Prekes.Prekes_id
+	Atsiemimo_punkto_id integer *> Atsiemimo_punktai.Atsiemimo_punkto_id
+	Kiekis integer
+}
+6.Nekilnojamo turto agentura
+Agentai {
+	Agento_id integer pk increments
+	Agento_vardas integer
+	Agento_pavarde integer
+	Kliento_id integer *>* Klientai.Kliento_id
+	Agento_regiono_id integer *>* Regionai.Regiono_id
+}
+
+Klientai {
+	Kliento_id integer pk increments
+	Kliento_vardas integer
+	Kliento_pavarde integer
+	Kliento_adresas integer
+}
+
+Regionai {
+	Regiono_id integer pk increments
+	Regiono_pavadinimas integer
+}
+
+Nuosavybes {
+	Nuosavybes_id integer pk increments *>* Papildoma_nuosaybes_informacija.Nuosaybes_id
+	Nuosavybes_kliento_id integer > Klientai.Kliento_id
+	Nuosaybes_agento_id integer > Agentai.Agento_id
+	Nuosavybes_seniunija integer
+}
+
+Pirkimo_pardavimo_sutartis {
+	Pirkimo_pardavimo_sutarties_id integer pk increments
+	Kliento_id integer > Klientai.Kliento_id
+	Agento_id integer > Agentai.Agento_id
+	Objekto_id integer
+	Data integer
+	Suma integer
+}
+
+Kliento_papildoma_info {
+	Kliento_id integer pk increments *>* Klientai.Kliento_id
+	Gimimo_data integer
+	El_pastas integer
+}
+
+Papildoma_nuosaybes_informacija {
+	Nuosaybes_id integer pk increments
+	Nuosaybes_tipas integer
+	Nuosaybes_plotas integer
+	Nuosaybes_kambariu_skaicius integer
+	Nuosaybes_paskirtis integer
+}
+
+Regionu_sarasas {
+	Regiono_id integer pk increments > Regionai.Regiono_id
+	Agento_id integer
+}
+7.Kino Teatras
+Sales {
+	Sales_id integer pk increments
+	Sales_tipas integer > Eiliu_skaicius.Sales_id
+	Priziurintis_darbuotojas_seanso_metu integer > Darbuotojai.Darbuotojo_id
+}
+
+Darbuotojai {
+	Darbuotojo_id integer pk increments
+	Darbuotojo_vardas integer
+	Darbuotojo_pavarde integer
+	Darbuotojo_gimimo_data integer
+	Darbo_vieta_einamosios_dienos_metu integer
+}
+
+Filmai {
+	Filmo_id integer pk increments > Vykstantis_seansas.Filmo_id
+	Filmo_pavadinimas integer
+	Filmo_plakatas integer
+	Licenzija_isdavusi_kompanija integer
+	Licenzijos_kaina integer
+}
+
+Dienos_Repertuarai {
+	Seanso_id integer pk increments
+	Filmo_laikas integer
+	Kino_sales_id integer > Sales.Sales_id
+	Dienos_Darbuotojas integer > Darbuotojai.Darbo_vieta_einamosios_dienos_metu
+}
+
+Klientai {
+	Kliento_id integer pk increments
+	Pirktas_vietu_skaicius integer
+	Uzimtos_vietos integer
+	Pirkti_priedai integer
+}
+
+Vykstantis_seansas {
+	Seanso_id integer pk increments > Dienos_Repertuarai.Seanso_id
+	Filmo_id integer
+	Priziurincio_darbuotojo_id integer
+	Parduotu_vietu_skaicius integer
+}
+
+Seansas_klientai {
+	Seanso_id integer pk increments > Vykstantis_seansas.Seanso_id
+	Kliento_id integer > Klientai.Kliento_id
+}
+
+Eiliu_skaicius {
+	Sales_id integer pk increments
+	Eiles_nr integer
+	Vietu_skaicius_eileje integer
+}
+
+
+
+
+
+
+

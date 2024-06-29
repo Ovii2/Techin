@@ -1,0 +1,43 @@
+1.
+SET AUTOCOMMIT FALSE;
+
+ALTER TABLE VYKDYTOJAI ADD COLUMN FIRSTNAME VARCHAR(80)
+
+ROLLBACK;
+COMMIT;
+
+2.
+CREATE USER veikejas PASSWORD 'slaptukas'
+
+3.
+GRANT SELECT, UPDATE 
+ON PROJEKTAI
+TO veikejas;
+
+4.
+//negali kurti ir redaguoti vartotoju
+GRANT ALTER ANY SCHEMA
+TO veike
+
+5.
+//panaikinti teises
+REVOKE SELECT 
+ON DABUOTOJAI
+FROM VEIKEJAS
+
+6.
+//padaryti adminu
+ALTER USER veikejas ADMIN TRUE
+
+7.
+//vartotojas be slaptazodzio
+CREATE USER tarpinis PASSWORD ''
+
+8.
+//sukurti role
+CREATE ROLE studentai
+
+GRANT SELECT, INSERT, UPDATE, DELETE TO studentai;
+
+//priskirti role
+GRANT studentai TO veikejas;

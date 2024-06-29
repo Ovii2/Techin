@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+/* -------2 uzduotis-------- */
+.pets {
+  background-color: #bcbcbc;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 40% auto;
+  gap: 3rem;
+}
+
+.pets__lside img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pets__rside {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.pets__rside img {
+  width: 6rem;
+  margin-bottom: -1.3rem;
+}
+
+.pets__rside p {
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+}
+
+.pets__box {
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.pets__box:hover {
+  background-color: #f0f8ff;
+}
+
+/* -------1 uzduotis-------- */
+
+.cat {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1rem;
+}
+
+.cat__lside {
+  display: grid;
+  align-self: end;
+  margin-left: 1rem;
+}
+
+.cat__lside h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+}
+
+.cat__mid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cat__rside {
+  display: grid;
+  align-content: center;
+  padding: 1rem;
+}
+
+/* -------3 uzduotis-------- */
+
+.dog {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: 20rem 25rem;
+}
+
+.dog__lside {
+  display: grid;
+  grid-template-rows: 20% 30%;
+  position: relative;
+}
+
+.dog__box__text {
+  position: absolute;
+  text-align: center;
+  bottom: 0rem;
+  color: #af5f40;
+  left: 1.8rem;
+  width: 80%;
+}
+
+.dog__rside {
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+
+.dog__lside img {
+  object-fit: cover;
+  width: 100%;
+  height: 500%;
+}
+
+.dog__rside img {
+  object-fit: cover;
+  width: 80%;
+  height: 100%;
+}
+
+.dog__rside img:nth-child(1) {
+  border-radius: 50%;
+}
+
+.dog__rside {
+  position: relative;
+}
+.dog__rside__box__text img {
+  position: relative;
+  right: -2rem;
+  height: 80%;
+  width: 60%;
+}
+
+.dog__rside__box__text p {
+  position: absolute;
+  top: 13rem;
+  left: 3rem;
+  color: #af5f40;
+}
+
+/* -------4 uzduotis-------- */
+
+.dalmantian {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.dalmantian__lside {
+  display: grid;
+  align-self: center;
+  grid-template-columns: 12rem 12rem;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.dalmantian__lside p:nth-of-type(2) {
+  color: #808080;
+}
+
+.dalmantian img {
+  object-fit: cover;
+  width: 20%;
+  height: 100%;
+}
+
+/* -------5 uzduotis-------- */
+
+.vet-clinic{
+  margin-top: 1rem;
+ display: grid;
+ grid-template-columns: 1.5fr 1fr 5fr;
+ object-fit: cover;
+ 
+}
+
+.vet-clinic img{
+  height: 100%;
+}
+
+.vet-clinic__lside{
+  padding: 5rem;
+}
+
+.vet-clinic__lside p:nth-of-type(1){
+  letter-spacing: 0.3rem;
+}
+
+.vet-clinic__rside img{
+  background-color:black;
+}

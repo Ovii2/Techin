@@ -1,0 +1,117 @@
+.pet-card {
+  display: flex;
+  position: relative;
+  width: 50rem;
+  border-bottom: 1px dashed var(--dark-gray);
+  margin-bottom: 2rem;
+}
+
+.pet-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  gap: 0.4rem;
+}
+
+.pet-name-date {
+  display: grid;
+  grid-template-columns: 5.5fr 1fr;
+}
+
+.pet-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+
+.edit-date {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.edit-date p {
+  margin-left: 0.2rem;
+}
+
+.edit-time {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.edit-notes-textarea {
+  position: relative;
+}
+
+.edit-notes-icons {
+  position: absolute;
+  right: 0;
+  bottom: 1.3rem;
+  right: 2rem;
+}
+
+.owner-name {
+  color: var(--dark-green);
+  font-weight: 600;
+}
+
+.pet-owner {
+  margin-top: -1rem;
+}
+
+.pet-notes {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.pet-status-container {
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.pending {
+  color: var(--dark-gray);
+  color: gray;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.pending::after {
+  content: '.... ⏱️';
+}
+
+.approved {
+  color: var(--light-green);
+  font-weight: 600;
+}
+
+.approved::before {
+  content: '\2713';
+}
+
+.approve-btn {
+  background-color: var(--primary-violet);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+.check-icon {
+  color: var(--light-green);
+}
+
+.close-icon {
+  color: var(--tomato);
+  padding: 1rem;
+}
+
+.edit-notes-textarea {
+  width: 100%;
+  height: 10rem;
+}

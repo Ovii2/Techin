@@ -1,0 +1,17 @@
+/* body{
+    max-width: 80%;
+    margin: 0 auto;
+} */
+
+img{
+    max-width: 10%;
+    border-radius: 50%;
+}
+
+table{
+   width: 100%;
+}
+
+table>td{
+    width: 60%;
+}

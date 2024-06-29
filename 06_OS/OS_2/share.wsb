@@ -1,0 +1,10 @@
+<Configuration>
+	<vGPU>Enables</vGPU>
+	<MemoryInMB>1000</MemoryInMB>
+	<MappedFolders>
+		<MappedFolder>
+			<HostFolder>C:\Users\Vartotojas\Desktop\data</HostFolder>
+			<ReadOnly>false</ReadOnly>
+		</MappedFolder>
+	</MappedFolders>
+</Configuration>

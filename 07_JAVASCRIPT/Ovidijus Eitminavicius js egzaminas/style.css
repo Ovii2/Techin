@@ -1,0 +1,22 @@
+img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1rem;
+}
+
+.card {
+  border: 0.02rem solid #252525;
+  padding: 1rem;
+}
+
+.card p {
+  font-size: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}

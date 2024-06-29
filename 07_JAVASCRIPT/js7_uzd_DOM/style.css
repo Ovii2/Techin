@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.grey {
+  color: grey;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  border: 0.05rem solid black;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}

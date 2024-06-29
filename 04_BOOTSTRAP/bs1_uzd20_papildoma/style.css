@@ -1,0 +1,26 @@
+header{    
+    background: url(images/header-background.jpg) no-repeat center / cover;
+    max-height: 100vh;
+    max-width: 100vw;
+    margin: 0;
+    position: relative;
+    padding: 25vw;
+}
+
+header::before{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.448);
+    z-index: 1;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fruits{
+    background-color: rgba(238, 224, 207, 0.757);
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+

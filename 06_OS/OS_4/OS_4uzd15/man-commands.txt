@@ -1,0 +1,6 @@
+kill - terminate a process
+login - begin session on the system
+lscpu - display information about the CPU architecture
+rename - rename files
+cpp - The C Preprocessor
+intro - introduction to user commands
