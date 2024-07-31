@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 0.2rem;
+  gap: 1rem;
+  width: 15%;
   margin-top: 1rem;
 }
 
@@ -29,4 +30,9 @@
 
 .nav-register {
   color: var(--tomato);
+}
+
+.new-user {
+  display: flex;
+  justify-content: center;
 }

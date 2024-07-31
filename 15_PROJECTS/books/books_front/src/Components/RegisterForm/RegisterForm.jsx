@@ -125,7 +125,7 @@ const RegisterForm = () => {
       {error && <div className='error'>{error}</div>}
 
       <input className='submit-btn' type='submit' value='Submit' />
-      <div className='already'>
+      <div className='new-user'>
         <span>
           Already have an account?{' '}
           <NavLink to='/login' className={'nav-login'}>

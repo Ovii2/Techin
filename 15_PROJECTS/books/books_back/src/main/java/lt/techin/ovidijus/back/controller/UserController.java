@@ -1,10 +1,13 @@
 package lt.techin.ovidijus.back.controller;
 
-import lt.techin.ovidijus.back.dto.LoginDTO;
-import lt.techin.ovidijus.back.dto.ResponseLoginDTO;
-import lt.techin.ovidijus.back.dto.UserDTO;
+import lt.techin.ovidijus.back.dto.login.LoginRequestDTO;
+import lt.techin.ovidijus.back.dto.user.UserRequestDTO;
+import lt.techin.ovidijus.back.dto.login.LoginResponseDTO;
+import lt.techin.ovidijus.back.dto.user.UserResponseDTO;
+import lt.techin.ovidijus.back.exceptions.UserAlreadyExistsException;
 import lt.techin.ovidijus.back.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,13 +26,20 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public String registerUser(@RequestBody UserDTO userDTO) {
-        return userService.registerUser(userDTO);
+    public ResponseEntity<UserResponseDTO> registerUser(@RequestBody UserRequestDTO userRequestDTO) {
+        try {
+            UserResponseDTO response = userService.registerUser(userRequestDTO);
+            return ResponseEntity.ok(response);
+        } catch (UserAlreadyExistsException e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(new UserResponseDTO(e.getMessage()));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new UserResponseDTO(e.getMessage()));
+        }
     }
 
     @PostMapping("/login")
-    public ResponseEntity<ResponseLoginDTO> login(@RequestBody LoginDTO loginDTO) {
-        ResponseLoginDTO loggedUser = userService.loginUser(loginDTO);
+    public ResponseEntity<LoginResponseDTO> login(@RequestBody LoginRequestDTO loginRequestDTO) {
+        LoginResponseDTO loggedUser = userService.loginUser(loginRequestDTO);
         if (loggedUser.getToken() == null) {
             return ResponseEntity.badRequest().body(loggedUser);
         }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from './Components/Header/Header';
@@ -17,48 +17,54 @@ import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import BookDetailsPage from './pages/BookDetailsPage/BookDetailsPage';
 
 function App() {
-  const [user, setUser] = useState({});
-  const [update, setUpdate] = useState(0);
+  const { isLoggedIn } = useContext(UserContext);
 
   return (
     <>
-      <ToastContainer autoClose={800} position='top-center' />
+      <ToastContainer autoClose={1200} position='top-center' />
       <Header />
       <CommentsProvider>
         <BooksProvider>
           <CategoriesProvider>
-            <UserContext.Provider value={{ user, setUpdate }}>
-              <Routes>
-                <Route path='/' element={<Navigate to='/register' />} />
-                <Route path='/register' element={<RegisterPage />} />
-                <Route path='/login' element={<LoginPage />} />
-                <Route
-                  path='/categories'
-                  element={
-                    <ProtectedRoute adminOnly={true}>
-                      <CategoriesPage />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path='/books'
-                  element={
-                    <ProtectedRoute>
-                      <BooksPage />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path='/books/:id'
-                  element={
-                    <ProtectedRoute>
-                      <BookDetailsPage />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route path='*' element={<NotFoundPage />} />
-              </Routes>
-            </UserContext.Provider>
+            <Routes>
+              <Route path='/' element={<Navigate to='/login' />} />
+              {!isLoggedIn ? (
+                <>
+                  <Route path='/register' element={<RegisterPage />} />
+                  <Route path='/login' element={<LoginPage />} />
+                </>
+              ) : (
+                <>
+                  <Route path='/register' element={<Navigate to='/books' />} />
+                  <Route path='/login' element={<Navigate to='/books' />} />
+                </>
+              )}
+              <Route
+                path='/categories'
+                element={
+                  <ProtectedRoute adminOnly={true}>
+                    <CategoriesPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path='/books'
+                element={
+                  <ProtectedRoute>
+                    <BooksPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path='/books/:id'
+                element={
+                  <ProtectedRoute>
+                    <BookDetailsPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path='*' element={<NotFoundPage />} />
+            </Routes>
           </CategoriesProvider>
         </BooksProvider>
       </CommentsProvider>

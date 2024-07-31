@@ -1,13 +1,13 @@
-package lt.techin.ovidijus.back.dto;
+package lt.techin.ovidijus.back.dto.login;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
 
 @Data
-public class LoginDTO {
+public class LoginRequestDTO {
 
-    @NotEmpty(message = "Email can't be emtpy")
+    @NotEmpty(message = "Email can't be empty")
     @Email(message = "Email should be valid")
     private String email;
 

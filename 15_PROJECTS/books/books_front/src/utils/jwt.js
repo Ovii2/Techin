@@ -19,3 +19,42 @@ export const getUserNameFromToken = (token) => {
     return null;
   }
 };
+
+export const getUserIdFromToken = (token) => {
+  try {
+    const decodedToken = jwtDecode(token);
+    return decodedToken.id;
+  } catch (error) {
+    console.error('Invalid token', error);
+    return null;
+  }
+};
+
+export const getUserEmailFromToken = (token) => {
+  try {
+    const decodedToken = jwtDecode(token);
+    return decodedToken.email;
+  } catch (error) {
+    console.error('Invalid token', error);
+    return null;
+  }
+};
+
+export const getUserImageFromToken = (token) => {
+  try {
+    const decodedToken = jwtDecode(token);
+    return decodedToken.image;
+  } catch (error) {
+    console.error('Invalid token', error);
+    return null;
+  }
+};
+
+export const isTokenExpired = (token) => {
+  try {
+    const { exp } = jwtDecode(token);
+    return Date.now() >= exp * 1000;
+  } catch (error) {
+    return true;
+  }
+};

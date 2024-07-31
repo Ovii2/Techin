@@ -45,5 +45,4 @@ public class Book {
     @Column(name = "pages")
     private Integer pages;
 
-
 }

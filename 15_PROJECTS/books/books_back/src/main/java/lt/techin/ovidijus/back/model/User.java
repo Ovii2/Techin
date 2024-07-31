@@ -19,9 +19,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-//@AllArgsConstructor
 public class User implements UserDetails {
-
 
     @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
